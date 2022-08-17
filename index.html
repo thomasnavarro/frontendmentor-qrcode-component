@@ -5,23 +5,93 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | QR code component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    :root {
+      /* Colors */
+      --color-white: hsl(0, 0%, 100%);
+      --color-lightGray: hsl(212, 45%, 89%);
+      --color-grayishBlue: hsl(220, 15%, 55%);
+      --color-darkBlue: hsl(218, 44%, 22%);
+
+      /* Breakpoints */
+      --breakpoint-mobile: 375px;
+      --breakpoint-desktop: 1440px;
+
+      /* Typo */
+      --body-fontSize: 15px;
+      --body-fontFamily: 'Outfit', sans-serif;
+      --body-fontWeightNormal: 400;
+      --body-fontWeightBold: 700;
+    }
+
+    body {
+      font-family: var(--body-fontFamily);
+      font-size: var(--body-fontSize);
+      font-weight: var(--body-fontWeightNormal);
+      background-color: var(--color-lightGray);
+
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card {
+      background-color: var(--color-white);
+      border-radius: 15px;
+      padding: 15px;
+      max-width: 300px;
+    }
+
+    .card__cover {
+      border-radius: 15px;
+      width: 100%;
+    }
+
+    .card__content {
+      text-align: center;
+      padding-inline: 15px;
+    }
+
+    .card__content-title {
+      color: var(--color-darkBlue);
+    }
+
+    .card__content-description {
+      color: var(--color-grayishBlue);
+    }
+
+    .attribution {
+      margin-top: 1rem;
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
 <body>
+  <div class="card">
+    <img class="card__cover" src="./images/image-qr-code.png" alt="QR Code to scan">
+    <div class="card__content">
+      <h2 class="card__content-title">Improve your front-end skills by building projects</h2>
+      <p class="card__content-description">Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
+    </div>
+  </div>
 
-  Improve your front-end skills by building projects
-
-  Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
-  
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Thomas Navarro</a>.
   </div>
 </body>
